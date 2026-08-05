@@ -123,7 +123,7 @@
   .calc-cta{margin-top:20px;}
 
   /* ── SERVICES ── */
-  .services-section{padding:0 0 60px;}
+  .services-section{padding:52px 0 60px;}
   .services-section h2{font-size:clamp(20px,3vw,26px);margin-bottom:6px;}
   .services-section .sub{color:var(--muted);font-size:14px;margin-bottom:24px;}
   .serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
@@ -192,7 +192,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.4 13.4c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.17-1.39-1.31-1.63-.14-.24-.01-.37.11-.49.12-.12.27-.31.4-.46.13-.16.18-.27.27-.45.09-.18.04-.33-.04-.45-.08-.12-.55-1.33-.75-1.83-.2-.49-.4-.42-.55-.43h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03 0 1.2.87 2.36 1 2.52.12.16 1.67 2.55 4.05 3.47 2.38.92 2.38.61 2.81.57.43-.04 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
         Hablar con un especialista
       </a>
-      <a class="btn-ghost" href="#calculadora">Calcular mi multa</a>
+      <a class="btn-ghost" href="#calculadora">Ver mi nivel de riesgo</a>
     </div>
     <div class="trust-row">
       <div class="trust-item"><div class="trust-dot"></div>Diagnóstico gratuito</div>
@@ -239,9 +239,10 @@
       </div>
       <div class="income-wrap">
         <span class="income-prefix">S/</span>
-        <input type="number" id="incomeInput" placeholder="Ej: 8,000" min="0">
+        <input type="number" id="incomeInput" placeholder="Ej: 8000" min="0">
         <span class="income-suffix">por mes</span>
       </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:7px;">Si no sabes el monto exacto, ingresa un estimado. El resultado seguirá siendo orientativo.</p>
 
       <hr class="calc-divider">
 
@@ -298,7 +299,7 @@
 
 <!-- SERVICIOS -->
 <section class="services-section">
-  <div class="wrap" style="padding-top:52px;">
+  <div class="wrap">
     <span class="section-label">Nuestros servicios</span>
     <h2>En qué te ayudamos</h2>
     <p class="sub" style="color:var(--muted);font-size:14px;margin-bottom:24px;">Tres frentes donde más se complica la contabilidad de un negocio en Perú.</p>
@@ -496,12 +497,12 @@
 
     // ── NRUS: no aplica Art.175 num.1 ──
     if(r.sinMulta){
-      rLevelEl.textContent='No aplica'; rLevelEl.style.color='#1FAE5C';
-      rMultaEl.textContent='S/0'; rMultaEl.className='rvalue c-green';
-      rMultaSubEl.textContent='El NRUS no está obligado a llevar libros contables (Art.175 no aplica).';
+      rLevelEl.textContent='Sin infracción Art.175'; rLevelEl.style.color='#1FAE5C';
+      rMultaEl.textContent='No aplica'; rMultaEl.className='rvalue c-green';
+      rMultaSubEl.textContent='El NRUS no exige libros contables — tu riesgo es superar los límites de ingresos.';
       rNetaEl.textContent='S/0'; rNetaEl.className='rvalue c-teal';
-      rGradEl.textContent='No corresponde';
-      rActionEl.textContent='Conserva tus comprobantes'; rActionEl.style.color='#1FAE5C';
+      rGradEl.textContent='Sin multa por libros, pero verifica tus ingresos';
+      rActionEl.textContent='Verifica tus límites de ingresos'; rActionEl.style.color='#1FAE5C';
       return;
     }
 
