@@ -109,6 +109,17 @@
   }
   .trust-item svg{flex-shrink:0;}
 
+  /* PRISM VISUAL */
+  .prism-visual{
+    padding:48px 0 40px;
+    background:radial-gradient(ellipse 70% 80% at 50% 50%, rgba(107,96,240,0.07) 0%, transparent 70%);
+    border-bottom:1px solid var(--border);
+  }
+  .prism-wrap{
+    display:flex;justify-content:center;align-items:center;
+    overflow:hidden;
+  }
+
   /* PAIN STRIP */
   .pain-strip{
     background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
@@ -367,11 +378,40 @@
 <header class="topbar">
   <div class="wrap">
     <div class="logo">
-      <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
-        <polygon points="20,3 3,35 20,35" fill="#6B60F0"/>
-        <polygon points="20,3 13,35 27,35" fill="#0FC4B4"/>
-        <polygon points="20,3 27,35 37,35" fill="#F5A524"/>
-        <polygon points="20,3 20,35 37,35" fill="rgba(245,165,36,0.4)"/>
+      <svg class="logo-icon" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="nFront" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4A40D0"/>
+            <stop offset="60%" stop-color="#5548E0"/>
+            <stop offset="100%" stop-color="#0FC4B4"/>
+          </linearGradient>
+          <linearGradient id="nTop" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stop-color="#7B72F5"/>
+            <stop offset="100%" stop-color="#B8B2FF"/>
+          </linearGradient>
+          <linearGradient id="nBot" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1A1640"/>
+            <stop offset="100%" stop-color="#0a0a18"/>
+          </linearGradient>
+          <filter id="nb1"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <!-- Incoming beam -->
+        <line x1="0" y1="20" x2="9" y2="20" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-dasharray="3 2"/>
+        <!-- Bottom 3D face -->
+        <polygon points="9,30 14,26 34,20 29,24" fill="url(#nBot)"/>
+        <!-- Front face -->
+        <polygon points="9,10 9,30 29,20" fill="url(#nFront)"/>
+        <!-- Top 3D face -->
+        <polygon points="9,10 14,6 34,16 29,20" fill="url(#nTop)"/>
+        <!-- Edge highlights -->
+        <line x1="9" y1="10" x2="14" y2="6" stroke="rgba(255,255,255,0.7)" stroke-width="1"/>
+        <line x1="14" y1="6" x2="34" y2="16" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+        <!-- Sparkle -->
+        <path d="M26,13 L27,15 L29,14 L27,16 L26,18 L25,16 L23,14 L25,15 Z" fill="#F5A524" opacity="0.9"/>
+        <!-- Exit beams -->
+        <line x1="29" y1="20" x2="52" y2="10" stroke="#6B60F0" stroke-width="2" stroke-linecap="round" filter="url(#nb1)"/>
+        <line x1="29" y1="20" x2="52" y2="20" stroke="#0FC4B4" stroke-width="2" stroke-linecap="round" filter="url(#nb1)"/>
+        <line x1="29" y1="20" x2="52" y2="30" stroke="#F5A524" stroke-width="2" stroke-linecap="round" filter="url(#nb1)"/>
       </svg>
       <div>
         <div style="line-height:1;">PRISMA</div>
@@ -410,6 +450,100 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0FC4B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#0FC4B4" stroke-width="2"/></svg>
         Respaldo ante SUNAT
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRISM VISUAL -->
+<section class="prism-visual">
+  <div class="wrap">
+    <div class="prism-wrap">
+      <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto;">
+        <defs>
+          <linearGradient id="pvFront" x1="0" y1="0.5" x2="1" y2="0.5">
+            <stop offset="0%" stop-color="#2E28A8"/>
+            <stop offset="45%" stop-color="#5548E0"/>
+            <stop offset="80%" stop-color="#0aA09A"/>
+            <stop offset="100%" stop-color="#0FC4B4"/>
+          </linearGradient>
+          <linearGradient id="pvTop" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stop-color="#6B60F0" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#C0BBFF" stop-opacity="0.85"/>
+          </linearGradient>
+          <linearGradient id="pvBot" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#12104a" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#060610" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="pvIn" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="white" stop-opacity="0"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0.55"/>
+          </linearGradient>
+          <filter id="pvGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="3" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="pvSoftGlow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- ── INCOMING BEAM ── -->
+        <line x1="10" y1="130" x2="148" y2="130"
+              stroke="url(#pvIn)" stroke-width="3" stroke-dasharray="12 7"/>
+        <!-- Beam label -->
+        <text x="12" y="122" fill="rgba(255,255,255,0.35)" font-family="Inter,sans-serif" font-size="10" font-weight="500">Luz blanca</text>
+
+        <!-- ── 3D PRISM ── -->
+        <!-- Bottom face (shadow) -->
+        <polygon points="148,208 164,194 308,130 292,144" fill="url(#pvBot)"/>
+        <!-- Front triangular face -->
+        <polygon points="148,52 148,208 292,130" fill="url(#pvFront)"/>
+        <!-- Top 3D face (highlight) -->
+        <polygon points="148,52 164,38 308,116 292,130" fill="url(#pvTop)"/>
+        <!-- Edge highlights -->
+        <line x1="148" y1="52" x2="164" y2="38" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
+        <line x1="164" y1="38" x2="308" y2="116" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <line x1="148" y1="52" x2="148" y2="208" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+        <line x1="292" y1="130" x2="308" y2="116" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <!-- Inner glow at refraction point -->
+        <circle cx="220" cy="130" r="18" fill="rgba(107,96,240,0.08)"/>
+        <!-- Sparkle star -->
+        <g transform="translate(255,95)">
+          <path d="M0,-7 L1.8,-1.8 L7,0 L1.8,1.8 L0,7 L-1.8,1.8 L-7,0 L-1.8,-1.8 Z" fill="#F5A524" opacity="0.95"/>
+        </g>
+        <!-- Small sparkle -->
+        <g transform="translate(170,170)">
+          <path d="M0,-3.5 L0.9,-0.9 L3.5,0 L0.9,0.9 L0,3.5 L-0.9,0.9 L-3.5,0 L-0.9,-0.9 Z" fill="#9B92F2" opacity="0.7"/>
+        </g>
+
+        <!-- ── EXIT BEAMS ── -->
+        <!-- Beam 1 Indigo — Reconstrucción -->
+        <line x1="292" y1="130" x2="440" y2="58"
+              stroke="#6B60F0" stroke-width="3.5" stroke-linecap="round" filter="url(#pvGlow)" opacity="0.95"/>
+        <!-- Beam 2 Teal — Declaraciones -->
+        <line x1="292" y1="130" x2="440" y2="130"
+              stroke="#0FC4B4" stroke-width="3.5" stroke-linecap="round" filter="url(#pvGlow)" opacity="0.95"/>
+        <!-- Beam 3 Orange — Laboral -->
+        <line x1="292" y1="130" x2="440" y2="202"
+              stroke="#F5A524" stroke-width="3.5" stroke-linecap="round" filter="url(#pvGlow)" opacity="0.95"/>
+
+        <!-- ── PILLAR DOTS ── -->
+        <circle cx="444" cy="58" r="5" fill="#6B60F0" filter="url(#pvSoftGlow)"/>
+        <circle cx="444" cy="130" r="5" fill="#0FC4B4" filter="url(#pvSoftGlow)"/>
+        <circle cx="444" cy="202" r="5" fill="#F5A524" filter="url(#pvSoftGlow)"/>
+
+        <!-- ── PILLAR LABELS ── -->
+        <!-- Pilar 1 -->
+        <text x="456" y="52" font-family="Syne,sans-serif" font-size="13" font-weight="700" fill="#9B92F2">Reconstrucción Contable</text>
+        <text x="456" y="67" font-family="Inter,sans-serif" font-size="10.5" fill="rgba(122,126,153,0.9)">Libros al día · Respaldo ante SUNAT</text>
+        <!-- Pilar 2 -->
+        <text x="456" y="124" font-family="Syne,sans-serif" font-size="13" font-weight="700" fill="#0FC4B4">Declaraciones SUNAT</text>
+        <text x="456" y="139" font-family="Inter,sans-serif" font-size="10.5" fill="rgba(122,126,153,0.9)">PDT mensual · Libros electrónicos</text>
+        <!-- Pilar 3 -->
+        <text x="456" y="196" font-family="Syne,sans-serif" font-size="13" font-weight="700" fill="#F5A524">Asesoría Laboral</text>
+        <text x="456" y="211" font-family="Inter,sans-serif" font-size="10.5" fill="rgba(122,126,153,0.9)">Planillas · Liquidaciones · SUNAFIL</text>
+      </svg>
     </div>
   </div>
 </section>
