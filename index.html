@@ -850,10 +850,12 @@
     const multaConInteres = multaBruta + interes;
 
     // ── Multa neta con gradualidad ──
-    // Gradualidad se aplica sobre la multa bruta; los intereses se pagan aparte
+    // La gradualidad se aplica sobre la multa bruta únicamente.
+    // Los intereses TIM ya están incluidos en la multa bruta total;
+    // si pagas de inmediato al subsanar, solo pagas la multa rebajada.
     const multaNeta = regime==='ns'
-      ? multaBruta * (1 - 0.70) + interes
-      : multaBruta * (1 - gradPct) + interes;
+      ? multaBruta * (1 - 0.70)
+      : multaBruta * (1 - gradPct);
 
     // Ejemplo con mínimo: S/550 × 5% = S/27.50 → S/27
     const ejemploMinimo = Math.round(minLegal * (1 - gradPct));
