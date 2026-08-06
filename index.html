@@ -12,7 +12,7 @@
 :root{--ink:#09090F;--surface:#0F1018;--card:#161822;--border:#222436;--indigo:#6B60F0;--teal:#0FC4B4;--orange:#F5A524;--text:#EDEEF5;--muted:#7A7E99;--green:#1FAE5C;}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
-h1,h2,h3,.syne{font-family:'Syne',sans-serif;letter-spacing:-.02em;}
+h1,h2,h3,.syne{font-family:'Syne',sans-serif;letter-spacing:-.03em;}
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
 .section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--indigo);margin-bottom:12px;display:block;}
@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none;}
 @media(max-width:760px){.hero-grid{grid-template-columns:1fr;}}
 .badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;border:1px solid rgba(15,196,180,.25);padding:5px 14px;border-radius:100px;margin-bottom:22px;}
 .badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);}
-.hero h1{font-size:clamp(34px,5vw,52px);font-weight:800;line-height:1.07;margin-bottom:18px;}
+.hero h1{font-size:clamp(30px,4.2vw,46px);font-weight:800;line-height:1.1;margin-bottom:18px;}
 .hero h1 em{font-style:normal;background:linear-gradient(95deg,var(--indigo),var(--teal) 50%,var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent;}
 .hero .lead{font-size:17px;color:var(--muted);margin-bottom:30px;}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
@@ -141,10 +141,10 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
     </a>
     <nav class="nav-links">
       <a href="index.html" class="active">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="blog.html">Blog</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="nosotros/">Nosotros</a>
+      <a href="servicios/">Servicios</a>
+      <a href="blog/">Blog</a>
+      <a href="contacto/">Contacto</a>
     </nav>
     <a class="wa-btn" href="https://wa.me/51906285008?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20PRISMA" target="_blank">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.4 13.4c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.17-1.39-1.31-1.63-.14-.24-.01-.37.11-.49.12-.12.27-.31.4-.46.13-.16.18-.27.27-.45.09-.18.04-.33-.04-.45-.08-.12-.55-1.33-.75-1.83-.2-.49-.4-.42-.55-.43h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03 0 1.2.87 2.36 1 2.52.12.16 1.67 2.55 4.05 3.47 2.38.92 2.38.61 2.81.57.43-.04 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
@@ -163,7 +163,7 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
         <p class="lead">PRISMA es tu despacho contable virtual. Resolvemos reconstrucciones, declaraciones y temas laborales para que puedas enfocarte en tu negocio.</p>
         <div class="cta-row">
           <a class="btn-primary" href="https://wa.me/51906285008?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20PRISMA" target="_blank">Consulta gratuita</a>
-          <a class="btn-ghost" href="servicios.html">Ver servicios</a>
+          <a class="btn-ghost" href="servicios/">Ver servicios</a>
         </div>
         <div class="trust-row">
           <div class="trust-item"><div class="trust-dot"></div>CPC colegiado</div>
@@ -217,7 +217,7 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
         </div>
         <h3>Reconstrucción Contable</h3>
         <p>¿Tu contabilidad lleva meses sin actualizarse? Ponemos tus libros al día con respaldo completo ante cualquier fiscalización de SUNAT.</p>
-        <a href="reconstruccion.html" class="serv-link">Ver detalle →</a>
+        <a href="reconstruccion/" class="serv-link">Ver detalle →</a>
       </div>
       <div class="serv-card">
         <div class="serv-icon ic2">
@@ -225,7 +225,7 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
         </div>
         <h3>Declaraciones SUNAT</h3>
         <p>PDT mensual, libros electrónicos y cumplimiento tributario gestionados mes a mes para que nunca se te pase una fecha.</p>
-        <a href="servicios.html#declaraciones" class="serv-link">Ver detalle →</a>
+        <a href="servicios/#declaraciones" class="serv-link">Ver detalle →</a>
       </div>
       <div class="serv-card">
         <div class="serv-icon ic3">
@@ -233,7 +233,7 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
         </div>
         <h3>Asesoría Laboral</h3>
         <p>Planillas, liquidaciones y cumplimiento frente a SUNAFIL, calculados correctamente desde el inicio para evitar demandas.</p>
-        <a href="servicios.html#laboral" class="serv-link">Ver detalle →</a>
+        <a href="servicios/#laboral" class="serv-link">Ver detalle →</a>
       </div>
     </div>
   </div>
@@ -307,7 +307,7 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
       </div>
       <div style="display:flex;flex-direction:column;gap:12px;flex-shrink:0;">
         <a class="btn-primary" href="https://wa.me/51906285008?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20PRISMA" target="_blank">Consulta gratuita</a>
-        <a href="reconstruccion.html" style="text-align:center;font-size:13px;color:var(--teal);font-weight:600;">Calcular mi multa →</a>
+        <a href="reconstruccion/" style="text-align:center;font-size:13px;color:var(--teal);font-weight:600;">Calcular mi multa →</a>
       </div>
     </div>
   </div>
@@ -324,9 +324,9 @@ footer{border-top:1px solid var(--border);padding:40px 0 28px;}
         </a>
         <p>Despacho contable virtual especializado en soluciones tributarias y laborales para PYMES e independientes en todo el Perú.</p>
       </div>
-      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="reconstruccion.html">Reconstrucción Contable</a></li><li><a href="servicios.html#declaraciones">Declaraciones SUNAT</a></li><li><a href="servicios.html#laboral">Asesoría Laboral</a></li></ul></div>
-      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="nosotros.html">Sobre nosotros</a></li><li><a href="blog.html">Blog</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="https://wa.me/51906285008?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20PRISMA" target="_blank">+51 906 285 008</a></li><li><a href="contacto.html">Solicitar asesoría</a></li></ul></div>
+      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="reconstruccion/">Reconstrucción Contable</a></li><li><a href="servicios/#declaraciones">Declaraciones SUNAT</a></li><li><a href="servicios/#laboral">Asesoría Laboral</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="nosotros/">Sobre nosotros</a></li><li><a href="blog/">Blog</a></li><li><a href="contacto/">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="https://wa.me/51906285008?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20PRISMA" target="_blank">+51 906 285 008</a></li><li><a href="contacto/">Solicitar asesoría</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2025 PRISMA Innovación Contable S.A.C. Todos los derechos reservados.</span></div>
   </div>
